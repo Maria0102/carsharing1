@@ -1,0 +1,55 @@
+@import "../../../mixins.scss";
+
+footer {
+
+    grid-area: footer_;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .copyright {
+            @include font(400, 13px, 15px, #999999);
+        }
+        .phone {
+            @include font(400, 13px, 15px, #121212);
+
+            &:hover {
+                color:#0EC261;
+            }
+        }
+
+        @include mobile {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+    
+            .copyright {
+                color: #EEEEEE;
+            }
+            .phone {
+                color: #0EC261;
+                margin-bottom: 8px;
+                
+                &:hover {
+                    color: #EEEEEE;
+                }
+            }
+        }
+    }
+    
+    padding: 0 64px 32px;
+    @include mindesktop {
+        padding: 0 32px 32px;
+    }
+
+    @include tablet {
+        padding: 0 32px 32px;
+        background-color: #E5E5E5;
+    }
+    @include mobile {
+        background-color: #151B1F;
+        padding: 16px;
+        //height: 72px;
+    }
+}

@@ -1,0 +1,15 @@
+@import "../../mixins.scss";
+
+.Nav {
+    grid-area: navbar;
+    flex: 0 0 64px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #151B1F;
+    @include mobile {
+        background-color: #E5E5E5;
+    }
+}

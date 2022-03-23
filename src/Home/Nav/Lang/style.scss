@@ -1,0 +1,25 @@
+@import "../../../mixins.scss";
+
+.lang {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
+    align-self: center;
+    justify-self: center;
+
+    @include font(700, 13px, 15px, #0EC261);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: url(/images/pointer.png), auto;
+    &:hover {
+        border-radius: 50%;
+        border: 1px solid #EEEEEE;
+        color: #EEEEEE;
+    }
+
+    @include mobile {
+        display: none;
+    }
+}
